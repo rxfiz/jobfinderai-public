@@ -1,0 +1,144 @@
+/* Single source for semantic UI values. Component and route styles consume these tokens. */
+:root {
+  color-scheme: light;
+  --bg: #eef3fa;
+  --sidebar: #e5ecf6;
+  --surface: #fbfcff;
+  --surface-raised: #e8eef7;
+  --surface-input: #ffffff;
+  --selected-surface: #e2ecfc;
+  --border: #d3ddeb;
+  --border-strong: #7487a2;
+  --text: #172b46;
+  --text-secondary: #465b76;
+  --text-muted: #526783;
+  --primary: #245bb3;
+  --primary-strong: #1c4995;
+  --primary-hover: #1c4995;
+  --button-primary-text: #ffffff;
+  --success: #276642;
+  --success-foreground: #276642;
+  --success-surface: #e6f0e8;
+  --success-border: #a9c7b0;
+  --warning: #835010;
+  --warning-foreground: #835010;
+  --warning-surface: #f7ecd5;
+  --warning-border: #dac28c;
+  --danger: #a12e34;
+  --danger-foreground: #a12e34;
+  --danger-surface: #f6e7e6;
+  --danger-border: #d8a9aa;
+  --info: #235a70;
+  --info-foreground: #235a70;
+  --info-surface: #e4eef1;
+  --info-border: #a5c1ca;
+  --ai: #355c69;
+  --ai-foreground: #4f3c74;
+  --ai-surface: #eee9f6;
+  --ai-border: #c2b5da;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-lg: 18px;
+  --font-xl: 21px;
+  --font-2xl: 27px;
+  --font-4xl: 34px;
+  --leading-body: 1.55;
+  --leading-heading: 1.2;
+  --control-compact: 36px;
+  --control-standard: 44px;
+  --control-touch: 44px;
+  --radius-sm: 7px;
+  --radius-control: 9px;
+  --radius-md: 10px;
+  --radius-card: 14px;
+  --radius-lg: 15px;
+  --radius-popover: 11px;
+  --radius-dialog: 16px;
+  --radius-pill: 999px;
+  --shadow-card: 0 2px 8px rgb(25 48 84 / 8%);
+  --shadow-popover: 0 14px 38px rgb(18 38 70 / 16%);
+  --shadow-dialog: 0 24px 72px rgb(12 29 56 / 27%);
+  --focus: 0 0 0 3px rgb(36 91 179 / 40%);
+  --motion-fast: 120ms;
+  --motion-standard: 180ms;
+  --motion-enter: 140ms;
+  --motion-ease: cubic-bezier(.2, .75, .25, 1);
+  --content-width: 1280px;
+  --content-width-wide: 1700px;
+  --form-width: 760px;
+  --sidebar-width: 248px;
+  --header-height: 76px;
+  --breakpoint-mobile: 560px;
+  --breakpoint-tablet: 850px;
+  font-family: "Inter Variable", Inter, "Segoe UI", system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #111c2e;
+  --sidebar: #152238;
+  --surface: #1b2b43;
+  --surface-raised: #243650;
+  --surface-input: #142137;
+  --selected-surface: #2b4265;
+  --border: #354a66;
+  --border-strong: #8196b5;
+  --text: #edf3ff;
+  --text-secondary: #c5d2e8;
+  --text-muted: #afc1dc;
+  --primary: #a8caff;
+  --primary-strong: #c0d9ff;
+  --primary-hover: #c0d9ff;
+  --button-primary-text: #14233b;
+  --success: #9dd3aa;
+  --success-foreground: #9dd3aa;
+  --success-surface: #293d30;
+  --success-border: #486e54;
+  --warning: #f1ca87;
+  --warning-foreground: #f1ca87;
+  --warning-surface: #403927;
+  --warning-border: #756540;
+  --danger: #f2a5a5;
+  --danger-foreground: #f2a5a5;
+  --danger-surface: #422f30;
+  --danger-border: #785052;
+  --info: #a9d2e0;
+  --info-foreground: #a9d2e0;
+  --info-surface: #2a3a3c;
+  --info-border: #516a70;
+  --ai: #b5d4dd;
+  --ai-foreground: #c8b8ea;
+  --ai-surface: #352e40;
+  --ai-border: #5e5272;
+  --shadow-card: 0 3px 12px rgb(4 10 22 / 44%);
+  --shadow-popover: 0 16px 42px rgb(3 8 20 / 55%);
+  --shadow-dialog: 0 26px 78px rgb(0 0 0 / 62%);
+  --focus: 0 0 0 3px rgb(168 202 255 / 47%);
+}
+
+html, body, #root { min-height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); }
+button, input, select, textarea { font: inherit; }
+button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible, [role="checkbox"]:focus-visible,
+[role="combobox"]:focus-visible, [role="radio"]:focus-visible, [role="tab"]:focus-visible {
+  outline: 2px solid var(--primary) !important;
+  outline-offset: 2px;
+  box-shadow: var(--focus) !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; }
+}
